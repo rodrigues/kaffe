@@ -168,7 +168,7 @@ defmodule Kaffe.GroupManager do
     group_member_supervisor().start_group_member(
       state.supervisor_pid,
       state.subscriber_name,
-      state.consumer_group,
+      state.consumer_group <> topic,
       state.worker_manager_pid,
       topic
     )
